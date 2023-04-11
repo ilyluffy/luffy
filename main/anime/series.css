@@ -1,0 +1,72 @@
+html, body {
+  height: 100%;
+  width: 99%;
+  background-color: black;
+}
+html {
+  
+  scrollbar-face-color: #646464;
+  scrollbar-base-color: #646464;
+  scrollbar-3dlight-color: #646464;
+  scrollbar-highlight-color: #646464;
+  scrollbar-track-color: #000;
+  scrollbar-arrow-color: #000;
+  scrollbar-shadow-color: #646464;
+  
+}
+
+::-webkit-scrollbar { width: 8px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #646464;}
+::-webkit-scrollbar-track-piece { background-color: #000;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #646464;}
+::-webkit-resizer { background-color: #666;}
+
+
+/* styles for series info */
+.series-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; /* set flex-direction to column */
+}
+
+.series-info img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.series-info h2 {
+  margin-top: 0;
+  color: white;
+}
+
+.series-info p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: white;
+}
+.episodesTitle {
+  font-size: 18px;
+  line-height: 1.5;
+  color: white;
+}
+
+.episodes {
+  margin-top: 30px;
+  color: white;
+
+}
+
+.episodes button {
+  display: table-caption;
+  font-size: 16px;
+  margin-bottom: 5px;
+  height:30px;
+  width:40px;
+  background: green;
+  border-color: black;
+  
+}

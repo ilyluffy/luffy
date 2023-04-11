@@ -1,0 +1,71 @@
+html, body {
+  background-color: black;
+}
+body{
+  color: white;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  width: 70%;
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #0070f3;
+  color: #fff;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background-color: #0d88ef;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.results li {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.results img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.result-info {
+  text-align: center;
+}
+
+.result-info h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.result-info p {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+}

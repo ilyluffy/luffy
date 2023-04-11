@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime/Manga Search</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Anime/Manga Search</h1>
+    <form id="search-form">
+      <label for="searchTerm">Search:</label>
+      <input type="text" id="searchTerm" name="searchTerm" required>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="results-list" class="results"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
