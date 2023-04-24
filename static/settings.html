@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>About:Blank Cloak</title>
+	<link href="index.css" rel="stylesheet">
+</head>
+<body>
+  <button onclick="goHome()" style="
+    color: white;
+    background-color: #0001;
+">Back to Home</button>
+	<div title="Settings">
+		<h1 style="color:powderblue;">Settings</h1>
+    <font color="White"> About:Blank Cloak </font> 
+		<label class="switch">
+			
+			<input type="checkbox" id="cloak-toggle">
+			<span class="slider round"></span>
+		</label>
+	</div>
+
+	<script>
+    function goHome() {
+			window.location.href = "index.html";
+		}
+
+    const cloakToggle = document.querySelector("#cloak-toggle");
+    
+    cloakToggle.addEventListener("change", function(e) {
+      const isChecked = e.target.checked;
+      localStorage.setItem("cloakToggleState", isChecked.toString());
+    });
+    
+    const savedState = localStorage.getItem("cloakToggleState");
+    
+    if (savedState === null) {
+      localStorage.setItem("cloakToggleState", false.toString());
+      cloakToggle.checked = false;
+    } else {
+      cloakToggle.checked = (savedState === "true");
+    }
+
+
+
+	</script>
+</body>
+</html>
