@@ -18,7 +18,7 @@ form.addEventListener('submit', async event => {
         if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
         else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
         if(savedState === "true"){
-          const iurl = protocol +"\\"+ currenturl + __uv$config.prefix + __uv$config.encodeUrl(url);
+          const iurl = protocol +"//"+ currenturl + __uv$config.prefix + __uv$config.encodeUrl(url);
             var win = window.open()
             var iframe = win.document.createElement('iframe')
             iframe.style.width = "100%";
