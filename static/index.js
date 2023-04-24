@@ -9,7 +9,7 @@ form.addEventListener('submit', async event => {
         let url = input.value.trim();
         if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
         else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
-        var iurl = "8080-shrill-wind-38345622.eu-ws3.runcode.io" + __uv$config.prefix + __uv$config.encodeUrl(url);
+        const iurl = currenturl + __uv$config.prefix + __uv$config.encodeUrl(url);
         var win = window.open()
         var iframe = win.document.createElement('iframe')
         iframe.style.width = "100%";
