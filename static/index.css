@@ -63,7 +63,9 @@ footer {
 .Settings {
   color: white;
 }
-
+.Bookmarklet {
+  color: white;
+}
 .switch {
   position: relative;
   display: inline-block;

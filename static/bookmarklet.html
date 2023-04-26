@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <link href="bookmarklet.css" rel="stylesheet">
+</head>
+  
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    
+    <center>
+    <p id="p1">javascript:(function()%7Bfunction openGame() %7B%0Avar win %3D window.open()%0Avar url %3D "https%3A%2F%2Fwww.gdash.ml"%0Avar iframe %3D win.document.createElement(%27iframe%27)%0Aiframe.style.width %3D "100%25"%3B%0Aiframe.style.height %3D "100%25"%3B%0Aiframe.style.border %3D "none"%3B%0Aiframe.src %3D url%0Awin.document.body.appendChild(iframe)%0A%7D%0AopenGame()%7D)()</p>
+    
+    
+    <button onclick="copyToClipboard('#p1')">Copy Code</button>
+    
+    </center>
+      
+    <script>
+        function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+            }
+    </script>
+</body>
+  
+</html>
