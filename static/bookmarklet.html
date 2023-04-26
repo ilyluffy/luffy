@@ -6,6 +6,10 @@
 </head>
   
 <body>
+    <button onclick="goHome()" style="
+    color: white;
+    background-color: #0001;
+">Back to Home</button>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -20,6 +24,9 @@
     </center>
       
     <script>
+        function goHome() {
+                window.location.href = "index.html";
+            }
         function copyToClipboard(element) {
             var $temp = $("<input>");
             $("body").append($temp);
