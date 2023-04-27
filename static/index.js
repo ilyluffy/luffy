@@ -2,10 +2,37 @@ const form = document.querySelector('form');
 const input = document.querySelector('input');
 const currenturl = window.location.hostname
 const protocol = window.location.protocol
+const button = document.querySelector('#BingChilling');
+
 
 const savedState = localStorage.getItem("cloakToggleState");
 
+let url = null;
 
+
+  
+button.addEventListener('click', () => {
+  // Your code to be executed when the button is clicked
+  
+  window.navigator.serviceWorker.register('./sw.js', {
+      scope: __uv$config.prefix
+  }).then(() => {
+      url = "https://godiscoolest.ga"
+      
+      if(savedState === "true"){
+        const furl = protocol +"//"+ currenturl + __uv$config.prefix + __uv$config.encodeUrl(url);
+          var idc = window.open()
+          var ok = idc.document.createElement('iframe')
+          ok.style.width = "100%";
+          ok.style.height = "100%";
+          ok.style.border = "none";
+          ok.src = furl
+          idc.document.body.appendChild(ok)
+      } else{
+
+      window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);}
+  });
+});
 
 
 
@@ -14,7 +41,7 @@ form.addEventListener('submit', async event => {
     window.navigator.serviceWorker.register('./sw.js', {
         scope: __uv$config.prefix
     }).then(() => {
-        let url = input.value.trim();
+        url = input.value.trim();
         if (!isUrl(url)) url = 'https://www.google.com/search?q=' + url;
         else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
         if(savedState === "true"){
