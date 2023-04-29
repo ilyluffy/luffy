@@ -47,6 +47,7 @@ form.addEventListener('submit', async event => {
         if(savedState === "true"){
           const iurl = protocol +"//"+ currenturl + __uv$config.prefix + __uv$config.encodeUrl(url);
             var win = window.open()
+            
             var iframe = win.document.createElement('iframe')
             iframe.style.width = "100%";
             iframe.style.height = "100%";
